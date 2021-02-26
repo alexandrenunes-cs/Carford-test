@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+    carford_town:
+        container_name: 'carford_town'
+        build: .
+        env_file:
+          - ./app/.env
+        volumes:
+          - ./app:/app
+        ports: 
+          - 8000:8000
